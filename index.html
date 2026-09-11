@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏天天的婚礼影像 · 作品集</title>
+<meta name="description" content="夏天天的婚礼影像 —— 婚礼影像作品集，作品仅供受邀亲友观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23C67A35'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23F5EEDF' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+/* ============ 设计基础（冰橙美式 · 复古文艺） ============ */
+:root{
+  --paper:     #F5EEDF;  /* 暖米底 */
+  --paper-2:   #EFE6D1;  /* 复古卡纸 */
+  --paper-3:   #E5D8BB;
+  --ink:       #3E3226;  /* 深棕墨 */
+  --ink-2:     #6F5D46;
+  --ink-3:     #9C8B72;
+  --caramel:   #C67A35;  /* 焦糖橙（唯一强调色） */
+  --caramel-2: #A9632A;
+  --tan:       #B98E67;  /* 浅棕线条 */
+  --line:      #D9C8A7;
+  --script: "Great Vibes","Kaiti SC","KaiTi",cursive;
+  --serif: "Playfair Display","Noto Serif SC","Songti SC","SimSun",serif;
+  --sans:  "Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:var(--caramel);text-decoration:none;touch-action:manipulation}
+button{touch-action:manipulation}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.45}
+::selection{background:var(--caramel);color:var(--paper)}
+:focus-visible{outline:2px solid var(--caramel);outline-offset:3px}
+
+/* 复古纸张颗粒 + 轻微晕影 */
+.grain{
+  position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.075;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.vignette{position:fixed;inset:0;z-index:59;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 40%, transparent 60%, rgba(62,50,38,.10) 100%);
+}
+
+/* 通用小标签（PART 风格） */
+.kicker{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--serif);font-size:.72rem;letter-spacing:.42em;color:var(--caramel);
+  text-transform:uppercase;
+}
+.kicker::before,.kicker::after{content:"";width:30px;height:1px;background:var(--tan)}
+
+/* ============ 密码门 ============ */
+.gate{
+  position:fixed;inset:0;z-index:50;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  background:
+    radial-gradient(900px 480px at 50% -8%, rgba(198,122,53,.12), transparent 62%),
+    linear-gradient(165deg, var(--paper) 0%, var(--paper-3) 100%);
+}
+.gate-card{
+  position:relative;width:100%;max-width:480px;
+  padding:70px 48px 46px;
+  background:var(--paper);
+  border:1px solid var(--tan);
+  box-shadow:0 30px 80px rgba(62,50,38,.16);
+  text-align:center;
+  animation:gate-in .9s ease both;
+}
+.gate-card::before{
+  content:"";position:absolute;inset:9px;border:1px solid var(--line);pointer-events:none;
+}
+@keyframes gate-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.gate-seal{
+  position:absolute;top:-21px;left:50%;transform:translateX(-50%);
+  width:42px;height:42px;border-radius:50%;
+  background:var(--caramel);border:1px solid var(--paper);
+  box-shadow:0 0 0 1px var(--caramel), 0 6px 14px rgba(169,99,42,.35);
+}
+.gate-seal::after{content:"";position:absolute;inset:9px;border-radius:50%;border:1px solid rgba(245,238,223,.75)}
+.gate-en{
+  font-family:var(--serif);font-size:.66rem;letter-spacing:.5em;color:var(--ink-3);
+  text-transform:uppercase;text-indent:.5em;
+}
+.gate-brand{
+  margin-top:12px;
+  font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,4.5vw,1.9rem);
+  letter-spacing:.14em;text-indent:.14em;color:var(--ink);
+}
+.gate-script{
+  margin-top:10px;font-family:var(--script);font-size:1.5rem;color:var(--caramel);
+}
+.gate-divider{width:56px;height:1px;background:var(--tan);margin:22px auto 6px}
+.gate-form{margin-top:16px;display:flex;flex-direction:column;gap:20px;align-items:center}
+.gate-label{font-size:.72rem;letter-spacing:.34em;color:var(--ink-3)}
+.gate-input{
+  width:100%;max-width:280px;
+  background:transparent;border:0;border-bottom:1px solid var(--line);
+  padding:10px 6px;font-family:var(--serif);font-size:1.05rem;color:var(--ink);
+  text-align:center;letter-spacing:.12em;transition:border-color .25s;
+}
+.gate-input::placeholder{color:var(--ink-3)}
+.gate-input:focus{outline:none;border-color:var(--caramel)}
+.gate-btn{
+  min-height:46px;padding:0 48px;cursor:pointer;
+  background:var(--caramel);color:var(--paper);
+  border:1px solid var(--caramel);
+  font-family:var(--serif);font-size:.92rem;letter-spacing:.5em;text-indent:.5em;
+  transition:background .25s,border-color .25s;
+}
+.gate-btn:hover{background:var(--caramel-2);border-color:var(--caramel-2)}
+.gate-error{color:var(--caramel-2);font-size:.82rem;letter-spacing:.1em;min-height:1.2em}
+.gate-error.shake{animation:shake .45s ease}
+@keyframes shake{0%,100%{transform:none}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.gate-hint{margin-top:26px;font-size:.72rem;color:var(--ink-3);letter-spacing:.22em}
+
+/* ============ 顶栏 ============ */
+.topbar{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(20px,5vw,56px);
+  background:rgba(245,238,223,.93);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;letter-spacing:.1em;font-size:1rem}
+.brand-dot{width:10px;height:10px;border-radius:50%;background:var(--caramel);box-shadow:0 0 0 3px rgba(198,122,53,.16)}
+.topbar-en{font-family:var(--serif);font-size:.64rem;letter-spacing:.4em;color:var(--ink-3);text-transform:uppercase}
+
+/* ============ 封面（主视觉） ============ */
+.hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:sepia(.22) saturate(.82) brightness(1.03);
+}
+.hero-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(245,238,223,.58) 0%, rgba(245,238,223,.20) 36%, rgba(245,238,223,.68) 78%, var(--paper) 100%);
+}
+.hero-content{position:relative;z-index:1;text-align:center;padding:72px 20px 116px}
+.hero-kicker{
+  font-family:var(--serif);font-size:.74rem;letter-spacing:.5em;color:var(--caramel);
+  text-transform:uppercase;text-indent:.5em;
+}
+.hero-en{
+  margin-top:24px;
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(2.3rem,8.6vw,4.2rem);
+  line-height:1.18;letter-spacing:.04em;
+  color:var(--ink);
+}
+.hero-title{
+  margin-top:20px;
+  font-weight:600;font-size:clamp(1.5rem,4.6vw,1.95rem);
+  letter-spacing:.14em;line-height:1.5;text-indent:.14em;
+}
+.hero-title em{font-style:normal;color:var(--caramel)}
+.hero-script{
+  margin-top:18px;font-family:var(--script);font-size:clamp(1.3rem,3vw,1.7rem);color:var(--caramel);
+}
+.hero-sub{margin-top:16px;font-size:.8rem;letter-spacing:.4em;color:var(--ink-2);text-indent:.4em}
+.hero-cue{
+  position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:1;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-size:.68rem;letter-spacing:.42em;color:var(--ink-2);text-indent:.42em;
+}
+.hero-cue-line{width:1px;height:44px;background:linear-gradient(var(--caramel), transparent);animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.5);transform-origin:top;opacity:.5}50%{transform:scaleY(1);transform-origin:top;opacity:1}}
+
+/* ============ 作品集 ============ */
+.works{max-width:1180px;margin:0 auto;padding:84px clamp(20px,5vw,56px) 30px;scroll-margin-top:60px}
+.sec-head{text-align:center;margin-bottom:64px}
+.sec-part{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--serif);font-size:.7rem;letter-spacing:.46em;color:var(--caramel);
+  text-transform:uppercase;
+}
+.sec-part::before,.sec-part::after{content:"";width:26px;height:1px;background:var(--tan)}
+.sec-title{font-size:clamp(1.7rem,4vw,2.3rem);letter-spacing:.24em;text-indent:.24em;margin-top:14px}
+.sec-sub{margin-top:12px;color:var(--ink-2);font-size:.88rem;letter-spacing:.14em}
+
+.works-grid{
+  display:grid;grid-template-columns:1fr;
+  gap:clamp(30px,5vw,52px);
+}
+.work{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  box-shadow:0 12px 32px rgba(62,50,38,.08);
+  padding:16px;
+  transition:transform .4s ease,box-shadow .4s ease;
+}
+.work:hover{transform:translateY(-4px);box-shadow:0 24px 54px rgba(62,50,38,.15)}
+.work-stage{
+  position:relative;aspect-ratio:16/9;overflow:hidden;
+  border:1px solid rgba(185,142,103,.55);
+  background:#221a10;
+}
+.work-video{width:100%;height:100%;display:block;object-fit:contain;background:#221a10}
+.work-placeholder{position:relative;width:100%;height:100%}
+.work-placeholder img{width:100%;height:100%;object-fit:cover;filter:sepia(.16) saturate(.9)}
+.work-badge{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  padding:10px 22px;background:rgba(245,238,223,.94);color:var(--caramel-2);
+  font-size:.76rem;letter-spacing:.2em;border:1px solid var(--tan);white-space:nowrap;
+}
+.embed-wrap{position:relative;width:100%;height:100%}
+.embed-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.link-holder{position:relative;width:100%;height:100%}
+.link-holder img{width:100%;height:100%;object-fit:cover;filter:sepia(.16) saturate(.9)}
+.link-btn{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  display:inline-flex;align-items:center;gap:10px;
+  min-height:46px;padding:0 28px;cursor:pointer;
+  background:rgba(245,238,223,.95);color:var(--caramel-2);
+  border:1px solid var(--tan);
+  font-family:var(--serif);font-size:.86rem;letter-spacing:.18em;
+  transition:background .25s,color .25s;
+}
+.link-btn:hover{background:var(--caramel);color:var(--paper)}
+
+.work-info{padding:22px 12px 10px}
+.work-no{
+  font-family:var(--serif);font-size:.66rem;letter-spacing:.4em;color:var(--tan);
+  text-transform:uppercase;
+}
+.work-title{font-size:1.3rem;letter-spacing:.06em;margin-top:6px}
+.work-meta{margin-top:6px;font-size:.74rem;letter-spacing:.22em;color:var(--ink-3)}
+.work-concept{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.concept-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--serif);font-size:.7rem;letter-spacing:.32em;color:var(--caramel);
+  text-transform:uppercase;
+}
+.concept-label::before{content:"";width:8px;height:8px;background:var(--caramel);transform:rotate(45deg)}
+.work-concept p{margin-top:8px;font-size:.9rem;color:var(--ink-2);text-align:justify}
+
+/* ============ 关于与联系 ============ */
+.about{
+  max-width:820px;margin:120px auto 0;padding:0 clamp(20px,5vw,56px);
+  text-align:center;
+}
+.about-script{margin-top:16px;font-family:var(--script);font-size:1.8rem;color:var(--caramel)}
+.about-text{margin-top:22px;font-size:.96rem;color:var(--ink-2);line-height:2.1}
+.about-contact{
+  display:inline-block;margin-top:34px;
+  border:1px solid var(--tan);padding:18px 44px;
+  background:var(--paper-2);
+}
+.about-contact .c-label{font-size:.7rem;letter-spacing:.4em;color:var(--ink-3);text-transform:uppercase}
+.about-contact .c-value{
+  margin-top:6px;font-family:var(--serif);font-size:1.5rem;font-weight:600;
+  letter-spacing:.14em;color:var(--caramel);
+}
+
+/* ============ 页脚 ============ */
+.footer{
+  margin-top:110px;padding:46px clamp(20px,5vw,56px) 56px;
+  border-top:1px solid var(--line);text-align:center;
+  font-size:.8rem;color:var(--ink-2);letter-spacing:.1em;
+}
+.footer-script{font-family:var(--script);font-size:1.5rem;color:var(--caramel)}
+.footer .brand{justify-content:center;margin-top:14px;margin-bottom:8px}
+.footer-copy{margin-top:10px;color:var(--ink-3);font-size:.72rem;letter-spacing:.2em}
+
+/* ============ 滚动显现 ============ */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ 响应式与动效克制 ============ */
+/* 手机优先：默认单列；宽屏两列错落 */
+@media (min-width:760px){
+  .works-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,52px)}
+  .work:nth-child(even){margin-top:56px}   /* 错落排布 */
+  .hero{min-height:88vh}
+  .hero-content{padding:90px 24px 130px}
+}
+/* 小屏手机微调 */
+@media (max-width:420px){
+  .gate-card{padding:58px 22px 36px}
+  .gate-brand{font-size:1.32rem;letter-spacing:.08em;text-indent:.08em}
+  .gate-hint{letter-spacing:.14em}
+  .hero-en{font-size:clamp(1.9rem,8.2vw,2.5rem)}
+  .hero-title{font-size:1.3rem;letter-spacing:.1em;text-indent:.1em}
+  .works{padding-top:72px}
+  .work-title{font-size:1.14rem}
+  .work-info{padding:18px 8px 6px}
+  .about{margin-top:88px}
+  .about-contact{padding:16px 24px}
+  .about-contact .c-value{font-size:1.25rem}
+  .footer{margin-top:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ============ 密码门 ============ -->
+<section class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-brand">
+  <div class="gate-card">
+    <div class="gate-seal" aria-hidden="true"></div>
+    <p class="gate-en">Wedding Film · Portfolio</p>
+    <h1 class="gate-brand" id="gate-brand">夏天天的婚礼影像</h1>
+    <p class="gate-script">Love is in every frame</p>
+    <div class="gate-divider" aria-hidden="true"></div>
+    <form class="gate-form" id="gate-form">
+      <label class="gate-label" for="pass-input">请输入访问密码</label>
+      <input class="gate-input" id="pass-input" type="password" autocomplete="off" placeholder="访问密码" aria-describedby="gate-error">
+      <button class="gate-btn" type="submit">入场</button>
+      <p class="gate-error" id="gate-error" role="alert"></p>
+    </form>
+    <p class="gate-hint">作品仅供受邀亲友观看，请勿外传</p>
+  </div>
+</section>
+
+<!-- ============ 主页面 ============ -->
+<div id="app" hidden>
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-dot" aria-hidden="true"></span><span id="brand-name">夏天天的婚礼影像</span></div>
+    <div class="topbar-en">Wedding Film</div>
+  </header>
+
+  <section class="hero">
+    <img class="hero-bg" src="https://aka.doubaocdn.com/s/G8aca6mqsE" alt="">
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Portfolio · 2026</p>
+      <p class="hero-en">Summer Day<br>Wedding Film</p>
+      <h1 class="hero-title">夏天天的<em>婚礼影像</em></h1>
+      <p class="hero-script">Love is in every frame</p>
+      <p class="hero-sub">— 婚礼影像作品集 —</p>
+    </div>
+    <a class="hero-cue" href="#works">
+      <span>查看作品</span>
+      <span class="hero-cue-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <section class="works" id="works">
+    <header class="sec-head">
+      <span class="sec-part">Part 01 · Portfolio</span>
+      <h2 class="sec-title">作品集</h2>
+      <p class="sec-sub">每段影像背后，都有一个值得被记住的故事</p>
+    </header>
+    <div class="works-grid" id="works-grid"></div>
+  </section>
+
+  <section class="about" id="about">
+    <header class="sec-head" style="margin-bottom:0">
+      <span class="sec-part">Part 02 · About &amp; Contact</span>
+      <h2 class="sec-title">关于</h2>
+    </header>
+    <p class="about-script">Every love story deserves to be told</p>
+    <p class="about-text" id="about-text">
+      「夏天天的婚礼影像」——每一帧视频，都在叙述婚礼当天的故事。
+      晨光、誓言、掌声与泪光，我们为你们把每一个瞬间认真收藏。
+    </p>
+    <div class="about-contact">
+      <p class="c-label">联系预约 · Contact</p>
+      <p class="c-value" id="contact-value">372827002</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-script">Thanks for watching</p>
+    <div class="brand"><span class="brand-dot" aria-hidden="true"></span><span>夏天天的婚礼影像</span></div>
+    <p class="footer-copy">© 2026 夏天天的婚礼影像 · 婚礼影像作品集</p>
+  </footer>
+
+</div>
+
+<script>
+/* =====================================================================
+   使用说明（改这里就能用）：
+   1. 改密码：把下方 PASSWORD 的值换成你自己的密码，保存即可。
+   2. 加作品：在 WORKS 数组里复制一份条目，填 title / date /
+      type / src / poster / concept 即可，详见每条注释。
+   3. 作品类型 type 有三种（已按你选的方案 B 排列）：
+      - "embed"（首选）：嵌入播放器。视频传到 YouTube 设为「不公开」，
+        src 填其嵌入地址（形如 https://www.youtube.com/embed/xxxx）
+      - "video"：直接播放视频文件（src 填视频地址，poster 填封面图）
+      - "link" ：跳转外链观看（src 填链接，适合网盘分享+提取码）
+   ===================================================================== */
+var PASSWORD = "5201314"; // ← 你的访问密码，记得改成自己的
+
+var BRAND = {
+  name: "夏天天的婚礼影像",   // 品牌名
+  contact: "372827002"        // 联系预约（微信/电话，等你确认后我再补标注）
+};
+
+/* ---------------- 作品数据 ---------------- */
+var WORKS = [
+  {
+    title: "示例作品 · 一",              // 作品标题
+    date: "2026.09",                    // 拍摄时间 / 出品时间
+    type: "embed",                      // embed / video / link（方案 B 用 embed）
+    src: "",                            // ← 填 YouTube 嵌入地址后，这里就会显示播放器
+    poster: "https://aka.doubaocdn.com/s/KAfRzi8Z5S", // 封面图
+    concept: "这里写这支影片的创作理念：从清晨的第一缕光开始，记录新娘挽起发丝的瞬间……（示例占位文案，请替换成你的真实作品与说明）"
+  },
+  {
+    title: "示例作品 · 二",
+    date: "2026.08",
+    type: "embed",
+    src: "",
+    poster: "https://aka.doubaocdn.com/s/L2FSchRhEI",
+    concept: "这里写这支影片的创作理念：戒指交换的那一刻，所有的誓言都有了形状……（示例占位文案，请替换成你的真实作品与说明）"
+  }
+];
+
+/* ---------------- 密码门逻辑 ---------------- */
+var SESSION_KEY = "wedding_film_unlocked_v2";
+var gate = document.getElementById("gate");
+var app = document.getElementById("app");
+var gateError = document.getElementById("gate-error");
+var gateForm = document.getElementById("gate-form");
+var passInput = document.getElementById("pass-input");
+
+function unlock(){
+  sessionStorage.setItem(SESSION_KEY, "1");
+  gate.hidden = true;
+  app.hidden = false;
+  revealOnScroll();
+  var first = document.querySelector(".sec-title");
+  if(first) first.focus({preventScroll:true});
+}
+
+function renderBrand(){
+  document.getElementById("gate-brand").textContent = BRAND.name;
+  document.getElementById("brand-name").textContent = BRAND.name;
+  document.getElementById("contact-value").textContent = BRAND.contact;
+}
+
+gateForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  var value = passInput.value.trim();
+  if(value === PASSWORD){
+    gateError.textContent = "";
+    passInput.setAttribute("aria-invalid","false");
+    unlock();
+  }else{
+    passInput.setAttribute("aria-invalid","true");
+    passInput.select();
+    gateError.textContent = "密码不正确，请重新输入";
+    gateError.classList.remove("shake");
+    void gateError.offsetWidth; // 重新触发动画
+    gateError.classList.add("shake");
+  }
+});
+
+/* ---------------- 作品渲染 ---------------- */
+function esc(s){
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+  });
+}
+
+function mediaHTML(w){
+  var poster = w.poster ? esc(w.poster) : "";
+  if(w.type === "embed"){
+    if(w.src){
+      return '<div class="embed-wrap"><iframe src="' + esc(w.src) +
+        '" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>';
+    }
+    return placeholderHTML(w, poster, "示例 · 填好视频地址后自动播放");
+  }
+  if(w.type === "link"){
+    return '<div class="link-holder">' +
+      (poster ? '<img src="' + poster + '" alt="' + esc(w.title) + '封面">' : "") +
+      '<a class="link-btn" href="' + esc(w.src) + '" target="_blank" rel="noopener">查看作品</a></div>';
+  }
+  /* 默认：video */
+  if(w.src){
+    return '<video class="work-video" controls preload="metadata"' +
+      (poster ? ' poster="' + poster + '"' : "") +
+      ' src="' + esc(w.src) + '"></video>';
+  }
+  return placeholderHTML(w, poster, "示例 · 填好视频地址后自动播放");
+}
+
+function placeholderHTML(w, poster, text){
+  return '<div class="work-placeholder">' +
+    (poster ? '<img src="' + poster + '" alt="' + esc(w.title) + '封面">' : "") +
+    '<span class="work-badge">' + esc(text) + '</span></div>';
+}
+
+function renderWorks(){
+  var grid = document.getElementById("works-grid");
+  grid.innerHTML = WORKS.map(function(w, i){
+    var no = "No." + (i < 9 ? "0" : "") + (i + 1);
+    return '<article class="work reveal" style="transition-delay:' + (i % 2 * 0.1).toFixed(2) + 's">' +
+      '<div class="work-stage">' + mediaHTML(w) + '</div>' +
+      '<div class="work-info">' +
+        '<p class="work-no">' + no + '</p>' +
+        '<h3 class="work-title">' + esc(w.title) + '</h3>' +
+        '<p class="work-meta">' + esc(w.date) + (w.category ? " · " + esc(w.category) : "") + '</p>' +
+        (w.concept
+          ? '<div class="work-concept"><span class="concept-label">Concept · 创作理念</span><p>' + esc(w.concept) + '</p></div>'
+          : "") +
+      '</div></article>';
+  }).join("");
+}
+
+/* ---------------- 滚动显现 ---------------- */
+var observer = null;
+function revealOnScroll(){
+  var items = document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){
+    for(var i=0;i<items.length;i++){ items[i].classList.add("in"); }
+    return;
+  }
+  if(observer){ observer.disconnect(); }
+  observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add("in"); observer.unobserve(en.target); }
+    });
+  }, {threshold:0.12});
+  items.forEach(function(el){ observer.observe(el); });
+}
+
+/* ---------------- 初始化 ---------------- */
+renderBrand();
+renderWorks();
+
+if(sessionStorage.getItem(SESSION_KEY) === "1"){
+  unlock();
+}else{
+  passInput.focus();
+}
+</script>
+</body>
+</html>
