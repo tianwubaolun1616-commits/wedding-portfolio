@@ -14,3 +14,10 @@ _mobile_ref*.jpg
 *.png
 *.jpg
 *.jpeg
+
+# 视频文件（作品视频一律放 YouTube 不公开，不要传进仓库）
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
