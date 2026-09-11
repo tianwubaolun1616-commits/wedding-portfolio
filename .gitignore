@@ -8,3 +8,9 @@ run_lark.py
 draft_5930ee29_folder/
 _ref_style*.jpg
 _mobile_ref*.jpg
+
+# 其他任务遗留的脚本/截图文件
+*.ps1
+*.png
+*.jpg
+*.jpeg
