@@ -395,10 +395,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.45}
    1. 改密码：把下方 PASSWORD 的值换成你自己的密码，保存即可。
    2. 加作品：在 WORKS 数组里复制一份条目，填 title / date /
       type / src / poster / concept 即可，详见每条注释。
-   3. 作品类型 type 有三种（已按你选的方案 B 排列）：
-      - "embed"（首选）：嵌入播放器。视频传到 YouTube 设为「不公开」，
-        src 填其嵌入地址（形如 https://www.youtube.com/embed/xxxx）
-      - "video"：直接播放视频文件（src 填视频地址，poster 填封面图）
+   3. 作品类型 type 有三种：
+      - "video"（推荐，当前用法）：直接播放视频文件。视频存在腾讯云 COS
+        私有空间，src 填「私有播放链接」（一年有效，到期找我重新生成即可）
+      - "embed"：嵌入第三方播放器（如 YouTube，国内打不开，不推荐）
       - "link" ：跳转外链观看（src 填链接，适合网盘分享+提取码）
    ===================================================================== */
 var PASSWORD = "5201314"; // ← 你的访问密码，记得改成自己的
@@ -409,22 +409,16 @@ var BRAND = {
 };
 
 /* ---------------- 作品数据 ---------------- */
+/* 加新作品：复制一份条目，改 title / date / type / src / poster / concept。
+   type="video"：直接播放视频（src 填腾讯云 COS 私有播放链接，有效期一年，到期需重新生成） */
 var WORKS = [
   {
-    title: "示例作品 · 一",              // 作品标题
-    date: "2026.09",                    // 拍摄时间 / 出品时间
-    type: "embed",                      // embed / video / link（方案 B 用 embed）
-    src: "",                            // ← 填 YouTube 嵌入地址后，这里就会显示播放器
-    poster: "https://aka.doubaocdn.com/s/KAfRzi8Z5S", // 封面图
-    concept: "这里写这支影片的创作理念：从清晨的第一缕光开始，记录新娘挽起发丝的瞬间……（示例占位文案，请替换成你的真实作品与说明）"
-  },
-  {
-    title: "示例作品 · 二",
-    date: "2026.08",
-    type: "embed",
-    src: "",
-    poster: "https://aka.doubaocdn.com/s/L2FSchRhEI",
-    concept: "这里写这支影片的创作理念：戒指交换的那一刻，所有的誓言都有了形状……（示例占位文案，请替换成你的真实作品与说明）"
+    title: "天台草坪婚礼",              // 作品标题
+    date: "2026.06",                    // 拍摄时间
+    type: "video",                      // 直接播放视频文件（COS 私有链接）
+    src: "https://wedding-video-1441297017.cos.ap-shanghai.myqcloud.com/6.26MVgai.mp4?q-sign-algorithm=sha1&q-ak=AKIDFO6dBZkrreQH02BMUTFvITQddPwFOHvN&q-sign-time=1789132657%3B1820668717&q-key-time=1789132657%3B1820668717&q-header-list=host&q-url-param-list=&q-signature=636424f02d94f9fac66c950be4afc53071745fba",
+    poster: "",                         // 封面图（可留空，播放器会自动显示视频首帧）
+    concept: "这是一场法式的草坪婚礼。新娘与新郎都是主播，在工作中相识——俊男美女，天作之合。除了要完整记录他们真挚的感情与这场婚礼的浪漫，镜头更要让新郎新娘的帅气与美丽，被格外地突出。"
   }
 ];
 
