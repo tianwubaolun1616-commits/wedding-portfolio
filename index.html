@@ -521,7 +521,7 @@ function mediaHTML(w){
   }
   /* 默认：video — 自定义播放器，不使用原生 controls */
   if(w.src){
-    return '<div class="custom-player" data-index="' + i + '">' +
+    return '<div class="custom-player">' +
       '<video class="work-video" preload="metadata" playsinline webkit-playsinline disablePictureInPicture' +
       (poster ? ' poster="' + poster + '"' : "") +
       ' src="' + esc(w.src) + '"></video>' +
