@@ -1,4 +1,4 @@
-﻿# 之前其他任务的遗留文件，不要提交
+# 之前其他任务的遗留文件，不要提交
 add_form_questions.ps1
 base_create_record.json
 base_fields.json
@@ -12,8 +12,9 @@ _mobile_ref*.jpg
 # 其他任务遗留的脚本/截图文件
 *.ps1
 *.png
-*.jpg
-*.jpeg
+# 但 assets 目录的封面图要提交
+!assets/
+!assets/*.jpg
 
 # 视频文件（作品视频一律放 YouTube 不公开，不要传进仓库）
 *.mp4
