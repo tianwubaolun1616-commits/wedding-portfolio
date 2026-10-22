@@ -509,7 +509,7 @@ function mediaHTML(w){
   }
   /* 默认：video */
   if(w.src){
-    return '<video class="work-video" controls preload="metadata"' +
+    return '<video class="work-video" controls preload="metadata" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false"' +
       (poster ? ' poster="' + poster + '"' : "") +
       ' src="' + esc(w.src) + '"></video>';
   }
@@ -559,6 +559,16 @@ function revealOnScroll(){
 /* ---------------- 初始化 ---------------- */
 renderBrand();
 renderWorks();
+
+/* 防下载：禁用右键、拖拽 */
+document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+document.querySelectorAll('video').forEach(function(v){
+  v.setAttribute('controlsList', 'nodownload noremoteplayback');
+  v.setAttribute('disablePictureInPicture', '');
+  v.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+  v.addEventListener('dragstart', function(e){ e.preventDefault(); });
+});
 
 if(sessionStorage.getItem(SESSION_KEY) === "1"){
   unlock();
